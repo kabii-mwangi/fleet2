@@ -111,14 +111,22 @@ function authenticateUser($username, $password) {
         $_SESSION['office_id'] = 1;
         $_SESSION['office_name'] = 'Admin Office';
         $_SESSION['permissions'] = json_encode([
-            'manage_users' => true,
-            'manage_vehicles' => true,
-            'manage_fuel' => true,
-            'view_reports' => true,
-            'manage_departments' => true,
-            'manage_employees' => true,
-            'manage_offices' => true,
-            'manage_roles' => true
+            'users_view' => true,
+            'users_edit' => true,
+            'vehicles_view' => true,
+            'vehicles_edit' => true,
+            'fuel_logs_view' => true,
+            'fuel_logs_edit' => true,
+            'employees_view' => true,
+            'employees_edit' => true,
+            'departments_view' => true,
+            'departments_edit' => true,
+            'reports_view' => true,
+            'reports_edit' => true,
+            'offices_view' => true,
+            'offices_edit' => true,
+            'roles_view' => true,
+            'roles_edit' => true
         ]);
         
         return true;
